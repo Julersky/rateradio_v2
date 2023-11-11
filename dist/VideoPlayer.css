@@ -5,11 +5,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Ensure it's on top of other content */
+  z-index: 999;
 }
 
 .foreground-content {
@@ -21,10 +21,11 @@
 }
 .foreground-content p {
   font-size: 18px;
-  margin: 0;
+  margin: 10px;
+  width: 560px;
 }
 .foreground-content button {
-  background-color: rgba(255, 88, 51, 0.5568627451); /* Example button color */
+  background-color: rgba(255, 88, 51, 0.5568627451);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -33,5 +34,15 @@
   margin-top: 10px;
 }
 .foreground-content button:hover {
-  background-color: #e5492c; /* Example hover color */
+  background-color: #e5492c;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .foreground-content {
+    padding: 10px; /* Adjust padding for small devices */
+  }
+  button {
+    font-size: 14px; /* Adjust button font size for small devices */
+  }
 }/*# sourceMappingURL=VideoPlayer.css.map */

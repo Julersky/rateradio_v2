@@ -19,6 +19,7 @@ const Gallery2 = ({data, itemShown}) => {
   };
 
   const selectedTitle = data.find((item) => item.id.videoId === selectedCard)?.snippet.title;
+  const selectedDescription = data.find((item) => item.id.videoId === selectedCard)?.snippet.description;
 
 
   let videos = data.filter((video) => video.id.kind === "youtube#video");
@@ -34,7 +35,7 @@ const Gallery2 = ({data, itemShown}) => {
           </section>
           <section className='card-text'>
             <h2 className='card-title'>{item.snippet.title}</h2>
-            <p className='card-description'>{item.snippet.title}</p>
+            <p className='card-description'>{item.snippet.description}</p>
           </section>
         </div>
            
@@ -42,7 +43,8 @@ const Gallery2 = ({data, itemShown}) => {
       {selectedCard !== null && (
         <div className="foreground-card">
           <div className="foreground-content">
-            <h4>{selectedTitle}</h4>
+            <h3>{selectedTitle}</h3>
+            <p>{selectedDescription}</p>
             <section>
               <iframe 
                 width="560" 
