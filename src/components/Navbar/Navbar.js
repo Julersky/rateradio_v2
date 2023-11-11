@@ -11,7 +11,7 @@ const Navbar = () => {
       <ul>
       {isHomePage ? null : (
           <li className="nav-link">
-            <Link to="/rateradio">Accueil</Link>
+            <Link to="/">Accueil</Link>
           </li>
         )}
         <li className={location.pathname === "/replay" ? "nav-link-active" : "nav-link"}>
