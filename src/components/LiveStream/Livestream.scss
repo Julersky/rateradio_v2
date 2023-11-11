@@ -1,0 +1,76 @@
+@import "../../styles/main.scss";
+
+.wrapper {
+  @include flexbox;
+  z-index: 2;
+  position: sticky;
+  top: 1px;
+  flex-direction: column;
+  // margin-bottom: 30px;
+  justify-content: center;
+  .collapse {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    .collapse-header {
+      @include flexbox;
+      justify-content: space-between;
+      background-color: #25774071;
+      color: $secondary-color;
+      border-radius: 5px;
+      padding: 8px 18px;
+      .selected {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        background-image: url("../../assets/arrow_down.png");
+        background-size: contain;
+        background-repeat:no-repeat;
+      }
+      .unselected {
+        @extend .selected;
+        background-image: url("../../assets/arrow_up.png");
+        
+      }
+
+      .collapse-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+    .collapse-body {
+      z-index: -1;
+      position: relative;
+      bottom: 10px;
+      height: 0px;
+      overflow: hidden;
+      background-color: #f7f7f7;
+      border-radius: 5px;
+
+      .collapse-content {
+        padding: 15px 20px;
+        color: $primary-color;
+        margin: 0;
+        .collapse-content-text {
+          font-size: 16px;
+        }
+      }
+      &.show {
+        height: auto;
+        transition: height 0.9s ease-in-out; /* Add a transition for the height property */
+      }
+
+      .collapse-body-unselected {
+        z-index: -1;
+        position: relative;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        padding: 0;
+        max-height: 0;
+      }
+    }
+  }
+}

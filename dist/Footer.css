@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+* {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+a:visited {
+  color: #ff6060;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  background: #000000;
+}
+.footer .footer-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.footer .footer-kasa-logo {
+  width: 150px;
+}
+.footer .footer-kasa-logo img {
+  height: 100%;
+  width: 100%;
+}
+.footer .footer-paragraph {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 142.6%;
+  color: #ffffff;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,44 @@
+@import "../../styles/main.scss";
+
+/* Navbar.scss */
+
+.navbar {
+  // background-color: #333;
+  padding: 10px 20px;
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    .nav-link {
+      margin: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s, transform 0.3s; /* Add transitions for color and transform */
+        font-size: 16px; /* Set the initial font size */
+      }
+
+      a:hover {
+        color: #ff5733; /* Change the color on hover */
+        transform: scale(1.1); /* Scale the text on hover (adjust the factor as needed) */
+      }
+    }
+    .nav-link-active{
+      @extend .nav-link;
+      a {
+        color: #ff5733;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Add responsive styles for the Navbar if needed */
+  }
+}
+

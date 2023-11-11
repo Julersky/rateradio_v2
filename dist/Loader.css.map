@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/components/Loader/Loader.scss","Loader.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;ACCJ;ADCI;EACE,oCAAA;EACA,kBAAA;EACA,qDAAA;EACA,YAAA;EACA,aAAA;EACA,kCAAA;ACCN;ADEI;EACE;IAAK,uBAAA;ECCT;EDAI;IAAO,yBAAA;ECGX;AACF","file":"Loader.css"}

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+* {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+a:visited {
+  color: #ff6060;
+}
+
+/* Navbar.scss */
+.navbar {
+  padding: 10px 20px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul .nav-link, .navbar ul .nav-link-active {
+  margin: 0 10px;
+}
+.navbar ul .nav-link a, .navbar ul .nav-link-active a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s; /* Add transitions for color and transform */
+  font-size: 16px; /* Set the initial font size */
+}
+.navbar ul .nav-link a:hover, .navbar ul .nav-link-active a:hover {
+  color: #ff5733; /* Change the color on hover */
+  transform: scale(1.1); /* Scale the text on hover (adjust the factor as needed) */
+}
+.navbar ul .nav-link-active a {
+  color: #ff5733;
+}
+@media (max-width: 768px) {
+  .navbar {
+    /* Add responsive styles for the Navbar if needed */
+  }
+}/*# sourceMappingURL=Navbar.css.map */

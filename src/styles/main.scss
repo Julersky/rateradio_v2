@@ -1,0 +1,39 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+
+// Variables
+$primary-color: #ff6060;
+$secondary-color: #f6f6f6;
+$tertiary-color: #e5e5e5;
+//Font Family
+$ff: "Montserrat", sans-serif;
+//Font Sizes
+
+// Mixins
+
+@mixin flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin font {
+  font-style: normal;
+  font-weight: 500;
+  font-family: $ff;
+}
+@mixin width {
+  width: 85%;
+  margin: auto;
+}
+
+* {
+  text-decoration: none;
+  font-family: $ff;
+}
+a:visited {
+  color: $primary-color;
+}
+// body {
+//   margin: 30px 0px 0px;
+// }

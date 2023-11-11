@@ -1,0 +1,28 @@
+/* Header.scss */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // Start : Ajout de style
+    border-bottom: 1px solid #333;
+    //End : Ajout de style
+    // background-color: #333;
+    color: #333;
+    padding: 10px 20px;
+  
+    .logo img {
+      max-width: 80px;
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  

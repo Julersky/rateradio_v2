@@ -1,0 +1,46 @@
+/* RadioPage.scss */
+.radio-page {
+  display: flex; /* Use Flexbox to arrange elements in a row */
+  align-items: center; /* Align items vertically in the center */
+  padding: 20px;
+}
+
+.radio-player {
+  display: flex;
+  align-items: center;
+}
+.radio-player .stop {
+  width: 10px;
+  height: 10px;
+  background-image: url("../../../assets/stop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.radio-player .play {
+  width: 10px;
+  height: 10px;
+  background-image: url("../../../assets/play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.radio-player button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 10px;
+}
+.radio-player button:hover {
+  background-color: #0056b3;
+}
+
+.stopwatch {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  flex: 1; /* Allow the stopwatch to take the remaining available space */
+}/*# sourceMappingURL=RadioPlayer.css.map */

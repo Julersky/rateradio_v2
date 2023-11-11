@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+* {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+a:visited {
+  color: #ff6060;
+}
+
+.error-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  flex-direction: column;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.error-container .error-title {
+  font-weight: 700;
+  font-size: 200px;
+  color: #ff6060;
+  margin: 0;
+}
+.error-container .error-text {
+  color: #ff6060;
+  font-size: 24px;
+}
+.error-container .error-text .line-break {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .error-container {
+    margin-top: 150px;
+  }
+  .error-container .error-title {
+    font-size: 30vw;
+  }
+  .error-container .error-text {
+    font-size: 6vw;
+    white-space: nowrap;
+  }
+  .error-container .error-text .line-break {
+    display: initial;
+  }
+}
+
+.home-link {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin: 50px 0px 100px;
+  text-decoration: underline;
+}/*# sourceMappingURL=Error.css.map */
