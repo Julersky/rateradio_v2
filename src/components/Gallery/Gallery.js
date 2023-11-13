@@ -45,10 +45,10 @@ const Gallery2 = ({data, itemShown}) => {
           <div className="foreground-content">
             <h3>{selectedTitle}</h3>
             <p>{selectedDescription}</p>
-            <section>
+            <section className='yt-iframe'>
               <iframe 
-                width="560" 
-                height="315" 
+                width="100%" 
+                height="100%" 
                 src={`https://www.youtube.com/embed/${selectedCard}?si=YCMDGsqvvV9_8a0G`} 
                 title={selectedTitle} 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

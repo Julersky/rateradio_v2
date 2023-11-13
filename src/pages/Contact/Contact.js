@@ -1,57 +1,55 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Loader from '../../components/Loader/Loader'; // Import your Loader component
 import './Contact.scss';
 
 const Contact = () => {
   document.title = "Raté Radio - Contact";
 
-
   const form = useRef();
-  const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
-  const [emailError, setEmailError] = useState(false); // State to track email validation error
-  const [isEmailValid, setIsEmailValid] = useState(false); // State to track email validation
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
 
   const validateEmail = (email) => {
-    // Regular expression for email validation
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
-    
-    // Check if the email is valid
     const isValid = validateEmail(emailValue);
     setIsEmailValid(isValid);
-    
+
     if (isValid) {
-      setEmailError(false); // Reset email validation error
+      setEmailError(false);
     }
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     const emailValue = form.current.email.value;
-
-    // Check if the email is valid
     const isValid = validateEmail(emailValue);
     setIsEmailValid(isValid);
 
     if (!isValid) {
       setEmailError(true);
-      return; // Don't submit if email is invalid
+      return;
     }
 
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
-        setIsSubmitted(true); // Set the submitted state to true
-        setEmailError(false); // Reset email validation error state
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    setIsLoading(true);
+
+    try {
+      const result = await emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY);
+      console.log(result.text);
+      setIsSubmitted(true);
+      setEmailError(false);
+    } catch (error) {
+      console.error(error.text);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -79,12 +77,16 @@ const Contact = () => {
               <label>Message</label>
               <textarea id="message" name="message"></textarea>
             </div>
-
-            <button type="submit">Envoyer</button>
+            {isLoading ? (
+              
+                <Loader />
+           
+            ) : (
+              <button type="submit">Envoyer</button>
+            )}
           </form>
-          {/* Conditional message based on form submission */}
           {isSubmitted && (
-            <p className="success-message">Merci pour votre message! <br></br>Nous reviendrons vers vous dans les plus brefs délais</p>
+            <p className="success-message">Merci pour votre message! <br />Nous reviendrons vers vous dans les plus brefs délais</p>
           )}
         </div>
       </main>

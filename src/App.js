@@ -5,6 +5,7 @@ import Contact from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
 import Replay from "./pages/Replay/Replay";
 import { Routes, Route } from "react-router-dom";
+// require('dotenv').config()
 
 function App() {
   return (

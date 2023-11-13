@@ -1,11 +1,9 @@
-@import "../../styles/main.scss";
-
 /* Navbar.scss */
 
 .navbar {
   // background-color: #333;
   padding: 10px 20px;
-  
+
   ul {
     list-style: none;
     display: flex;
@@ -14,7 +12,7 @@
     padding: 0;
 
     .nav-link {
-      margin: 0 10px;
+      margin: 10px;
 
       a {
         text-decoration: none;
@@ -29,7 +27,8 @@
         transform: scale(1.1); /* Scale the text on hover (adjust the factor as needed) */
       }
     }
-    .nav-link-active{
+
+    .nav-link-active {
       @extend .nav-link;
       a {
         color: #ff5733;
@@ -38,7 +37,15 @@
   }
 
   @media (max-width: 768px) {
-    /* Add responsive styles for the Navbar if needed */
+    ul {
+      flex-direction: column; /* Change to a column layout for smaller screens */
+      align-items: center; /* Center items in the column */
+      text-align: center; /* Center text in each item */
+      padding-top: 10px; /* Add space at the top for better spacing */
+    }
+
+    .nav-link {
+      margin: 10px 0; /* Add margin to each link for spacing in the column */
+    }
   }
 }
-
